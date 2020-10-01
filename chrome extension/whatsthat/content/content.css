@@ -1,0 +1,7 @@
+.filterText {
+  position: fixed;
+  z-index: 100;
+  background: lightgreen;
+  padding: 5px;
+  border-radius: 10px;
+}

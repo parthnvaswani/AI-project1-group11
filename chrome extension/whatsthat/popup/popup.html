@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What's That?</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-width: 250px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    button {
+      outline: none;
+      color: white;
+      background: rgb(4, 150, 40);
+      border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      font-size: 100%;
+      padding: 0.5em 1em;
+      border: transparent;
+      display: inline-block;
+      line-height: normal;
+      white-space: nowrap;
+      vertical-align: middle;
+      text-align: center;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-decoration: none;
+      -webkit-box-shadow: 0 0.5em 10px #777;
+      -moz-box-shadow: 0 0.5em 10px #777;
+      box-shadow: 0 0.5em 10px #777;
+    }
+    button:hover {
+      background-color: rgb(9, 99, 30);
+    }
+    button:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 10px #777;
+    }
+    body {
+      background: linear-gradient(-45deg, #faa8a8, #98d2e7, #f38f8f, #e2e067)
+        no-repeat;
+      background-size: 400% 400%;
+      animation: gradient 7s ease infinite;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
+  </style>
+  <body>
+    <button id="filter">Filter chat</button>
+    <button id="refine">Refine chat</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

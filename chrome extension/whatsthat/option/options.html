@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab">
+        <button class="tablinks active" data-word="curse">
+          Add curse word
+        </button>
+        <button class="tablinks" data-word="slang">Add slang word</button>
+        <button class="tablinks" data-word="rcurse">Remove curse word</button>
+        <button class="tablinks" data-word="rslang">Remove slang word</button>
+      </div>
+
+      <div id="curse" class="tabcontent" style="display: block">
+        <div class="tabcontent2">
+          <form id="curseform">
+            <label for="word"><h3>Word to add:</h3></label>
+            <input
+              type="text"
+              id="word"
+              placeholder="type a curse word..."
+              style="padding: 5px; font-size: 1.2em"
+              required
+            /><br /><br />
+            <input type="submit" value="add" />
+          </form>
+        </div>
+      </div>
+
+      <div id="slang" class="tabcontent">
+        <div class="tabcontent2">
+          <form id="slangform">
+            <label for="sword"><h3>Word to add:</h3></label>
+            <input
+              type="text"
+              id="sword"
+              placeholder="type a slang word..."
+              style="padding: 5px; font-size: 1.2em"
+              required
+            /><br /><br />
+            <input
+              type="text"
+              id="mword"
+              placeholder="type its meaning..."
+              style="padding: 5px; font-size: 1.2em"
+              required
+            /><br /><br />
+            <input type="submit" value="add" />
+          </form>
+        </div>
+      </div>
+
+      <div id="rcurse" class="tabcontent">
+        <div class="tabcontent2">
+          <form id="rcurseform">
+            <label for="word"><h3>Select and remove a word:</h3></label>
+            <select id="cselect" required>
+              <option value="" disabled selected>
+                select a word to remove
+              </option>
+            </select>
+            <br /><br />
+            <input type="submit" class="not" value="remove" />
+            <input
+              type="button"
+              id="rac"
+              value="remove all"
+              style="margin-left: 50px"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div id="rslang" class="tabcontent">
+        <div class="tabcontent2">
+          <form id="rslangform">
+            <label for="word"><h3>Select and remove a word:</h3></label>
+            <select id="sselect" required>
+              <option value="" disabled selected>
+                select a word to remove
+              </option>
+            </select>
+            <br /><br />
+            <input type="submit" class="not" value="remove" />
+            <input
+              type="button"
+              id="ras"
+              value="remove all"
+              style="margin-left: 50px"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

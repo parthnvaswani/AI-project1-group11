@@ -1,0 +1,66 @@
+body {
+  font-family: Arial;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  display: flex;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  flex-basis: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 180px;
+}
+.tabcontent2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 250px;
+  width: 500px;
+}
+input[type="submit"]:not(.not) {
+  margin-left: auto;
+  display: block;
+  padding: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+#rcurseform input,
+#rslangform input,
+#rcurseform select,
+#rslangform select {
+  padding: 5px;
+}

@@ -1,8 +1,29 @@
 //add listener for activating popup of extension when user is on web.whatsapp.com
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.todo == "showPageAction") {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.pageAction.show(tabs[0].id);
-    });
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "complete") {
+    chrome.scripting
+      .insertCSS({
+        target: { tabId: tabId },
+        files: ["./content/content.css"],
+      })
+      .then(() => {
+        console.log("INJECTED THE FOREGROUND STYLES.");
+
+        chrome.scripting
+          .executeScript({
+            target: { tabId: tabId },
+            files: [
+              "./content/curseWords.js",
+              "./content/slangs.js",
+              "./content/compromise-tokenize.js",
+              "./content/fuse.js",
+              "./content/content.js",
+            ],
+          })
+          .then(() => {
+            console.log("INJECTED THE FOREGROUND SCRIPT.");
+          });
+      })
+      .catch((err) => console.log(err));
   }
 });

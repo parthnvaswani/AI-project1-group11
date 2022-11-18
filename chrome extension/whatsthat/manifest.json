@@ -1,6 +1,5 @@
 {
-  "manifest_version": 2,
-
+  "manifest_version": 3,
   "name": "What's That?",
   "description": "WhatsApp messages refiner.",
   "version": "1.0",
@@ -9,8 +8,7 @@
     "48": "./icons/icon48.png",
     "16": "./icons/icon16.png"
   },
-
-  "page_action": {
+  "action": {
     "default_icon": "./icons/icon16.png",
     "default_popup": "./popup/popup.html",
     "default_title": "What's That?"
@@ -20,23 +18,8 @@
     "open_in_tab": false
   },
   "background": {
-    "scripts": ["eventPage.js"],
-    "persistent": false
+    "service_worker": "eventPage.js"
   },
-
-  "content_scripts": [
-    {
-      "matches": ["https://web.whatsapp.com/*"],
-      "js": [
-        "./content/curseWords.js",
-        "./content/slangs.js",
-        "./content/compromise-tokenize.js",
-        "./content/fuse.js",
-        "./content/content.js"
-      ],
-      "css": ["./content/content.css"]
-    }
-  ],
-
-  "permissions": ["tabs", "storage", "https://web.whatsapp.com/*"]
+  "permissions": ["activeTab", "tabs", "storage", "scripting"],
+  "host_permissions": ["https://web.whatsapp.com/*"]
 }

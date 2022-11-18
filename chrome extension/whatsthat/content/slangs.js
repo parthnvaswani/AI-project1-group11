@@ -1,5 +1,4 @@
-let slangs = {
-
+var slangs = {
   brb: "be right back",
   ily: "i love you",
   ty: "thank you",
@@ -14,7 +13,6 @@ let slangs = {
   w: "with",
   abt: "about",
   u: "you",
-
   gtg: "going to go",
   nvm: "never mind",
   bcoz: "because",
@@ -61,7 +59,6 @@ let slangs = {
   ilysm: "i love you so much",
   imo: "in my opinion",
   jk: "just kidding",
-
   ldr: "long distance relationship",
   l2g: "like to go",
   ly: "love you",
@@ -162,7 +159,6 @@ let slangs = {
   "b-day": "birthday",
   eod: "end of day",
   fml: "fuck my life",
-
   kk: "okay",
   lol: "laughing out loud",
   msg: "message",

@@ -1,10 +1,9 @@
-let curseWords = [
+var curseWords = [
   "ahole",
   "anus",
   "ash0le",
   "ash0les",
   "asholes",
-
   "Ass Monkey",
   "Assface",
   "assh0le",
@@ -22,7 +21,6 @@ let curseWords = [
   "basterds",
   "basterdz",
   "Biatch",
-
   "bitches",
   "bitch",
   "BlowJob",
@@ -38,7 +36,6 @@ let curseWords = [
   "Clit",
   "cnts",
   "cntz",
-
   "cockhead",
   "cock-head",
   "cocks",
@@ -53,7 +50,6 @@ let curseWords = [
   "dick",
   "dild0",
   "dild0s",
-
   "dildos",
   "dilld0",
   "dilld0s",
@@ -63,14 +59,12 @@ let curseWords = [
   "dominatrix",
   "dyke",
   "enema",
-
   "fag1t",
   "faget",
   "fagg1t",
   "faggit",
   "faggot",
   "fagg0t",
-
   "fagit",
   "fags",
   "fagz",
@@ -79,7 +73,6 @@ let curseWords = [
   "faigs",
   "fart",
   "flipping the bird",
-
   "fucker",
   "fucking",
   "fuckin",
